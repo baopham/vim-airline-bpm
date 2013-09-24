@@ -32,5 +32,6 @@ call airline#parts#define_accent('modflag', 'red')
 call airline#parts#define_accent('gitflag', 'yellow')
 
 let g:airline_section_c = airline#section#create(['%<', 'filename', 'gitflag', 'modflag', ' ', 'readonly'])
+let g:airline_inactive_collapse = 0
 
 " vim: et sw=2 sts=2
