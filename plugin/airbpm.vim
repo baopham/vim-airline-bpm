@@ -26,13 +26,13 @@ let g:airline_section_y = "%{strlen(&fenc)>0?&fenc:'  '}%{strlen(&ff)>0?'   '
 let g:airline#extensions#whitespace#trailing_format = 'trailing:%s'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent:%s'
 
-call airline#parts#define_raw('modflag', '%{ &mod ? " +" : "" }')
+call airline#parts#define_raw('modflag', '%{ &mod ? " + " : "" }')
 call airline#parts#define_raw('gitflag', '%{exists("b:git_flag") ? b:git_flag : ""}')
 call airline#parts#define_raw('filename', '%f')
 call airline#parts#define_accent('modflag', 'red')
 call airline#parts#define_accent('gitflag', 'yellow')
 
-let g:airline_section_c = airline#section#create(['%<', 'filename', 'gitflag', 'modflag', ' ', 'readonly'])
+let g:airline_section_c = airline#section#create(['%<', 'filename', 'gitflag', 'modflag', 'readonly'])
 let g:airline_inactive_collapse = 0
 
 " vim: et sw=2 sts=2
