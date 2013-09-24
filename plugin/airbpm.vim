@@ -11,6 +11,7 @@ augroup airbpm
   autocmd BufEnter,BufWritePost     * call airbpm#update_git_flag()
 augroup END
 
+" Init: configure airline {{{1
 " Hard dividers don't look so good in iTerm with some transparency
 if !has('gui_running')
   let g:airline_left_sep = ''
